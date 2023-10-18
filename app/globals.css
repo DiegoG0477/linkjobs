@@ -1,5 +1,7 @@
 .login__container{
     display: flex;
+    
+    background-color: #355480;
 }
 .parte1{
     width: 50%;
@@ -15,5 +17,4 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: #355480;
 }

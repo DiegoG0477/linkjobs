@@ -13,5 +13,4 @@ function HomeLoginPage() {
     </div>
   );
 }
-
 export default HomeLoginPage;
