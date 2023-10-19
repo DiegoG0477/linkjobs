@@ -1,0 +1,59 @@
+.mensaje_home{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #EEECEC;
+}
+
+.imagen_home{
+    position: relative;
+    width: 70%;
+    height: auto;
+    clip-path: inset(0 10% 0 10%);
+    right: 0;
+}
+
+.mensaje{
+    position: relative;
+    left: 50px;
+    font-size: 50px;
+    text-align: right;
+    line-height: 1.7;
+}
+
+.mensaje_dos{
+    font-size: 30px;
+    text-align: center;
+    margin: 60px;
+}
+
+.imagen_vacant{
+    display: flex;
+    width: 40%;
+    height: auto;
+
+
+}
+
+.contain_empresas{
+    background: linear-gradient(to bottom, #EEF3F9 71.8%, #BED0F4 30%);
+    margin-bottom: 150px;
+}
+
+.mensaje_tres{
+    font-size: 30px;
+    text-align: center;
+}
+
+.contain_cuadrito{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    background: #F3F3F3;
+    width: 700px;
+    height: 300px;
+    left: 50%;
+    transform: translate( -50%);
+    margin-top: 100px;
+}
