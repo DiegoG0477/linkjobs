@@ -32,8 +32,6 @@
     display: flex;
     width: 40%;
     height: auto;
-
-
 }
 
 .contain_empresas{
@@ -48,12 +46,19 @@
 
 .contain_cuadrito{
     position: absolute;
-    display: flex;
     justify-content: center;
+    align-items: center;
     background: #F3F3F3;
     width: 700px;
     height: 300px;
     left: 50%;
     transform: translate( -50%);
     margin-top: 100px;
+}
+
+.contain_button{
+    position: absolute;
+    left: 50%;
+    transform: translate( -50%);
+
 }
