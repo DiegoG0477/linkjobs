@@ -12,9 +12,26 @@
 .imagen{
     width: 50%;
     height: 100vh;
-    object-fit: cover;
+    object-fit:cover;
 }
 body{
     margin: 0;
     padding: 0;
+}
+.formVacant{
+    margin-left: 125px;
+    width: 50%;
+}
+.PublicarVacante__container{
+    display: flex;
+    align-items: center;
+}
+.img_pageweb{
+    width: 50%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: end;
+}
+.button_add{
+    text-align: center;
 }

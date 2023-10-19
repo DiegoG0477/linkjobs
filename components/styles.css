@@ -82,3 +82,41 @@
     border: 2px solid #CB5132;
     border-radius: 20px;
 }
+.labelPublicVacant{
+    font-size: 15px;
+}
+.inputPublicVacant{
+    margin-left: 5px;
+    padding: 10px 10px;
+    border-radius: 6px;
+    border: 1px solid #b6b6b6;
+    width: 25vw;
+    font-size: 15px;
+}
+.inputPublicVacantShort{
+    margin-left: 5px;
+    padding: 10px 10px;
+    border-radius: 6px;
+    border: 1px solid #606060;
+    width: 10vw;
+}
+.labelInputPublicVacant__container{
+    margin: 20px 0px;
+}
+.titles_vacant{
+    font-size: 25px;
+    font-weight: bold;
+    color: #000000;
+    margin: 20px 0px;
+}
+.subtitle_vacant{
+    font-size: 13px;
+    color: #606060;
+    margin-top: -10px;
+}
+.buttonAddVacant{
+    border: 0;
+    background-color: #EC3C65;
+    padding: 15px 70px;
+    border-radius: 4px;
+}
