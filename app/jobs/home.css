@@ -25,7 +25,9 @@
 .mensaje_dos{
     font-size: 30px;
     text-align: center;
-    margin: 60px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    font-weight: bold;
 }
 
 .imagen_vacant{
@@ -37,11 +39,14 @@
 .contain_empresas{
     background: linear-gradient(to bottom, #EEF3F9 71.8%, #BED0F4 30%);
     margin-bottom: 150px;
+    position: relative;
+    display: flex;
 }
 
 .mensaje_tres{
     font-size: 30px;
     text-align: center;
+    font-weight: bold;
 }
 
 .contain_cuadrito{
@@ -53,12 +58,43 @@
     height: 300px;
     left: 50%;
     transform: translate( -50%);
-    margin-top: 100px;
+    margin-top: 50px;
+    border-radius: 10px;
 }
 
 .contain_button{
     position: absolute;
     left: 50%;
     transform: translate( -50%);
+    margin-top: 70px;
+}
 
+.cocontain{
+    position: relative;
+    height: 600px;
+}
+
+.Img_logos{
+    position: relative;
+    height: 130px;
+    width: auto;
+    object-fit: contain;
+}
+.contain_logos{
+    position: absolute;
+    width: 700px;
+    height: 300px;
+    align-items: center;
+    left: 45%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    margin-top: 100px;
+}
+
+.mensaje_cuatro{
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 50px;
 }
