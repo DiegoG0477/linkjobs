@@ -80,6 +80,21 @@
     width: auto;
     object-fit: contain;
 }
+
+.Img_dif{
+    position: relative;
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+}
+
+.Img_dif2{
+    position: relative;
+    height: 150px;
+    width: auto;
+    object-fit: contain;
+}
+
 .contain_logos{
     position: absolute;
     width: 700px;

@@ -25,11 +25,11 @@ function HomePage() {
               <Img src={ImgVacant} alt="imgane-vacant" className="imagen_vacant"></Img>
               <div className="contain_logos">
                   <Img src={BBVA} alt="bbva" className="Img_logos"></Img>
-                  <Img src={Chedraui} alt="chedraui" className="Img_logos"></Img>
+                  <Img src={Chedraui} alt="chedraui" className="Img_dif"></Img>
                   <Img src={Lala} alt="lala" className="Img_logos"></Img>
                   <Img src={Nestle} alt="nestle" className="Img_logos"></Img>
-                  <Img src={Sambors} alt="sambors" className="Img_logos"></Img>
-                  <Img src={Telmex} alt="telmex" className="Img_logos"></Img>
+                  <Img src={Sambors} alt="sambors" className="Img_dif2"></Img>
+                  <Img src={Telmex} alt="telmex" className="Img_dif"></Img>
               </div>
           </div>
 
