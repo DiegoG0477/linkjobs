@@ -1,4 +1,5 @@
 import Nav from "@/components/Nav";
+import '../globals.css';
 function jobsLayout({ children }) {
   return <div>
     <Nav/>
