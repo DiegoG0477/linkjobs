@@ -7,7 +7,7 @@ function Nav() {
       <div>
         <InputSearch />
       </div>
-      <ButtonSearch />
+      <ButtonSearch text="Buscar empleo"/>
     </div>
   );
 }

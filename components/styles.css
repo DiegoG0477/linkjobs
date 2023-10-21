@@ -60,6 +60,16 @@
     border-radius: 10px;
     border: 0;
 }
+.button__searchChange{
+    height: 46px;
+    width: 200px;
+    padding: 0 20px;
+    color: #000000;
+    background-color: transparent;
+    border: 2px solid #CB5132;
+    border-radius: 20px;
+    font-size: 16px;
+}
 .input-icon{
   position: absolute;
   width: 20px;
