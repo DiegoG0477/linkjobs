@@ -1,6 +1,5 @@
 .login__container{
     display: flex;
-    
     background-color: #355480;
 }
 .parte1{
@@ -61,7 +60,7 @@ body{
 
 .job-date{
     color:#AAAAAA;
-    font-size: 0.75rem,;
+    font-size: 0.75rem;
 }
 
 .job-vacant{
@@ -86,9 +85,47 @@ body{
     border: none;
     color: white;
     font-weight: bolder;
-    padding-top:2vh;
-    padding-bottom:2vh;
-    padding-left: 1vw;
-    padding-right:1vw;
+    padding: 2vh 1vw;
     margin-top: auto;
+}
+.position_logo{
+    position: relative;
+    top: 200px;
+}
+
+.contain_search{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(1fr, max-content);
+}
+
+.contain_navigate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+}
+
+.button_navigate {
+    margin: 10px;
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    background-color: #083CAE;
+    border: none;
+    box-shadow: none;
+    color: white;
+}
+.page-number {
+    padding: 5px;
+    margin: 0 5px;
+}
+
+.current-page {
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 20px;
+
 }

@@ -1,14 +1,18 @@
 "use client";
 import Img from "next/image";
 import { useEffect, useState } from "react";
+import "@/app/globals.css"
 
 export default function JobCard(props) {
   const [vacantType, setVacantType] = useState(false);
+  const [genericType,setGenericType]= useState(false);
   const [statusColor, setStatusColor] = useState("#083CAE");
 
   useEffect(() => {
     if (props.type === "vacant") {
       setVacantType(true);
+    }else if(props.type === "generic"){
+      setGenericType(true);
     }
 
     if (props.requestStatus === "Aceptado") {
@@ -32,32 +36,44 @@ export default function JobCard(props) {
           <p style={{ marginTop: "5vh" }}>texto adicional complementario</p>
         </div>
 
+
         <div>
-          {vacantType ? (
-            <>
-              <p style={{ fontWeight: "bolder" }}>Solicitudes</p>
-              <div className="requests-number-box">
-                <p>{props.requests}</p>
-              </div>
-            </>
+          {genericType ? (
+              <>
+                <button className="show-requests-button"><p>Postularme</p></button>
+                <div>
+                  <Img src={props.image} className="position_logo" alt="" />
+                </div>
+              </>
           ) : (
-            <>
-              <p style={{ fontWeight: "bolder" }}>STATUS</p>
-              <div
-                style={{ background: { statusColor } }}
-                className="request-status"
-              >
-                <p className="request-status-text">{props.requestStatus}</p>
-              </div>
-            </>
+              <>
+                {vacantType ? (
+                    <>
+                      <p style={{ fontWeight: "bolder" }}>Solicitudes</p>
+                      <div className="requests-number-box">
+                        <p>{props.requests}</p>
+                      </div>
+                    </>
+                ) : (
+                    <>
+                      <p style={{ fontWeight: "bolder" }}>STATUS</p>
+                      <div
+                          style={{ background: { statusColor } }}
+                          className="request-status"
+                      >
+                        <p className="request-status-text">{props.requestStatus}</p>
+                      </div>
+                    </>
+                )}
+                <div>
+                  <Img src={props.image} className="company-logo" alt="" />
+                </div>
+
+                <button className="show-requests-button">{vacantType ? (<p>Ver Postulados</p>) : (<p>Ver Detalles</p>)}</button>
+              </>
           )}
-
-          <div>
-            <Img src={props.image} className="company-logo" alt="" />
-          </div>
-
-          <button className="show-requests-button">{vacantType ? (<p>Ver Postulados</p>) : (<p>Ver Detalles</p>)}</button>
         </div>
+
       </div>
     </>
   );
