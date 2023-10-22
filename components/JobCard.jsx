@@ -40,7 +40,7 @@ export default function JobCard(props) {
         <div>
           {genericType ? (
               <>
-                <button className="show-requests-button"><p>Postularme</p></button>
+                <button className="show-requests-button" data-bs-toggle="modal" data-bs-target="#mimodal"><p>Postularme</p></button>
                 <div>
                   <Img src={props.image} className="position_logo" alt="" />
                 </div>
@@ -61,7 +61,7 @@ export default function JobCard(props) {
                           style={{ background: { statusColor } }}
                           className="request-status"
                       >
-                        <p className="request-status-text">{props.requestStatus}</p>
+                        <p className ="request-status-text">{props.requestStatus}</p>
                       </div>
                     </>
                 )}

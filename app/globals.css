@@ -127,5 +127,9 @@ body{
     font-weight: bold;
     border-radius: 10px;
     font-size: 20px;
+}
 
+.input_text{
+    width: 400px;
+    height: 200px;
 }
