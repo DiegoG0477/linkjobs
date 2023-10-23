@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;1,600&family=Playpen+Sans:wght@400;700&display=swap');
+
 .mensaje_home{
     position: relative;
     display: flex;
@@ -20,14 +23,18 @@
     font-size: 50px;
     text-align: right;
     line-height: 1.7;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
 }
 
 .mensaje_dos{
-    font-size: 30px;
+    font-size: 36px;
     text-align: center;
     margin-top: 150px;
     margin-bottom: 150px;
-    font-weight: bold;
+    font-family: 'Nunito', sans-serif ;
+    font-family: 'Playpen Sans', cursive;
+    font-weight: 400;
 }
 
 .imagen_vacant{
@@ -46,7 +53,9 @@
 .mensaje_tres{
     font-size: 30px;
     text-align: center;
-    font-weight: bold;
+    font-family: 'Nunito', sans-serif ;
+    font-family: 'Playpen Sans', cursive;
+    font-weight: 400;
 }
 
 .contain_cuadrito{
@@ -95,6 +104,8 @@
 .mensaje_cuatro{
     font-size: 25px;
     text-align: center;
-    font-weight: bold;
     margin-top: 50px;
+    font-family: 'Nunito', sans-serif ;
+    font-family: 'Playpen Sans', cursive;
+    font-weight: 600;
 }
