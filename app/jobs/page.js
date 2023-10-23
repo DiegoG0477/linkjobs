@@ -10,7 +10,7 @@ import Lala from "@/public/assets/lala.png"
 import Nestle from "@/public/assets/nestle.png"
 import Sambors from "@/public/assets/sanborns-logo.png"
 import Telmex from "@/public/assets/telmex.png"
-
+import Link from "next/link"
 function HomePage() {
   return (
       <div>
@@ -38,9 +38,11 @@ function HomePage() {
               <p className="mensaje_tres">Publica tu vacanate con nosotros</p>
               <div className="contain_cuadrito">
                   <p className="mensaje_cuatro">Encuentra al mejor empleado para tu empresa</p>
+                  <Link href="/jobs/publicarvacante">
                   <div className="contain_button">
                       <ButtonSearch text="Publicar vacante" id={1}/>
                   </div>
+                  </Link>
               </div>
           </div>
 
