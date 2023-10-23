@@ -10,7 +10,7 @@ function FormularioLogin() {
             <div className='centrar'>
             <Img src={login} alt='usuario' className='img-login'/>
             </div>   
-        <form className='form'>
+        <form className='formLogin'>
             <InputLabel label="Correo electronico" type="email" name="email" holder="Email"/>
             <InputLabel label="Contraseña" type="password" name="password" holder="Password"/>
             <div className='centrar'>
