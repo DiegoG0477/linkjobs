@@ -14,7 +14,7 @@
     border-radius: 30px;
     margin: 0 auto;
 }
-.form{
+.formLogin{
     margin-top: 20px;
 }
 .centrar{
@@ -148,4 +148,76 @@
     color:white;
     font-size: 1rem;
     font-weight: bold;
+}
+.inputRegister{
+    border: 1px solid #B7B7B7;
+    border-radius: 20px;
+    padding: 10px;
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+    background-color: transparent;
+    margin: 10px;
+}
+.inputRegisterImg{
+    border: 1px solid #B7B7B7;
+    border-radius: 20px;
+    padding: 10px;
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+    background-color: transparent;
+    margin: 10px;
+}
+.input_icon_register{
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.buttonRegister{
+    border: 1px solid #B7B7B7;
+    border-radius: 40px;
+    padding: 10px;
+    width: 300px;
+    height: 60px;
+    font-size: 18px;
+    color: white;
+    background-color: #203880;
+}
+.buttonRegisterStyle{
+    border: 2px solid #203880;
+    border-radius: 40px;
+    padding: 10px;
+    width: 300px;
+    height: 60px;
+    font-size: 18px;
+    color: #243f91;
+    background-color: transparent;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+}
+.col{
+    margin: 0 40px;
+}
+li{
+    font-size: 10px;
+    color: grey;
+}
+ul{
+    margin-top: -5px;
+}
+
+.terminos{
+    font-size: 10px;
+    color: grey;
+    width: 29vw;
+    margin: 10px auto;
+}
+.btn_center{
+    margin: 5px auto;
+    width: 19.6vw;
 }
