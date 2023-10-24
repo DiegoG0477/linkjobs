@@ -1,7 +1,9 @@
+'use client'
 import "./globals.css";
 import Login from "../components/Login";
 import Img from "next/image";
 import image from "@/public/assets/imagen-login.jpg"
+
 function HomeLoginPage() {
   return (
     <div className="login__container">
@@ -9,7 +11,6 @@ function HomeLoginPage() {
         <Login />
       </div>
         <Img src={image} alt="imagen-login" className="imagen"/>
-     
     </div>
   );
 }

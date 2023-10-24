@@ -2,7 +2,7 @@ import React from 'react'
 import "./styles.css"
 function Button(props) {
   return (
-    <button className='button_login'>{props.text}</button>
+    <button className='button_login' onClick={props.loginFunction} >{props.text}</button>
   )
 }
 

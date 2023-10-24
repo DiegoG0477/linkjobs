@@ -1,14 +1,22 @@
-import React from 'react'
-import "./styles.css"
+import React from "react";
+import "./styles.css";
 function InputLabel(props) {
   return (
-    <div className='inputLabel__container'>
-        <div>
-        <label className='label-form'>{props.label}</label>
-        </div>
-        <input className='input-form' type={props.type} name={props.name} placeholder={props.holder}/>
+    <div className="inputLabel__container">
+      <div>
+        <label className="label-form">{props.label}</label>
+      </div>
+      <input
+        className="input-form"
+        type={props.type}
+        name={props.name}
+        placeholder={props.holder}
+        onChange={(event) => {
+          props.metodo(event.target.value);
+        }}
+      />
     </div>
-  )
+  );
 }
 
-export default InputLabel
+export default InputLabel;

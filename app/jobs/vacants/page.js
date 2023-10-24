@@ -3,8 +3,21 @@ import React, { useState, useEffect } from "react";
 import JobCard from "@/components/JobCard";
 import zumayaLogo from "@/public/assets/zumaya-img.png";
 import "@/app/globals.css";
+import { token } from "@/app/data/token";
+import axios from "axios";
 
 export default function Requests() {
+    const [jobs, setJobs] = useState([]);
+    useEffect(() => {
+        getJobs();
+    },[]);
+
+    const getJobs = async () => {
+        const response = await axios.get('http://localhost:3001/api/v1/jobs');
+        setJobs(response.data.data);
+        console.log(jobs)
+    }
+
     const totalCards = 7; // Total de tarjetas
     const cardsPerGroup = 6; // Cantidad de tarjetas por grupo
     const [currentGroup, setCurrentGroup] = useState(1);
@@ -13,16 +26,16 @@ export default function Requests() {
     const startCard = (currentGroup - 1) * cardsPerGroup;
     const endCard = currentGroup * cardsPerGroup;
 
-    const cardsToShow = Array.from({ length: totalCards }).map((_, index) => {
+    const cardsToShow = jobs.map((job, index) => {
         if (index >= startCard && index < endCard) {
             return (
                 <JobCard
                     key={index}
                     sinceDate="Hace 2 días"
-                    vacant="Repartidor"
-                    salary="14,000"
-                    company="Zumaya"
-                    location="Tuxtla Gutiérrez, Chiapas"
+                    vacant={job.puesto}
+                    salary={job.salario}
+                    company={job.empresa}
+                    location={job.ubicacion}
                     requests="9876"
                     image={zumayaLogo}
                     type="vacant"

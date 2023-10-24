@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, { useEffect } from 'react'
 import Img from "next/image";
 import ImgHome from "@/public/assets/busqueda_trabajo_asesoramiento.webp"
 import ImgVacant from "@/public/assets/istockphoto-1070456274-170667a.jpg"
@@ -10,8 +11,14 @@ import Lala from "@/public/assets/lala.png"
 import Nestle from "@/public/assets/nestle.png"
 import Sambors from "@/public/assets/sanborns-logo.png"
 import Telmex from "@/public/assets/telmex.png"
+import { token } from '@/app/data/token'
+import Link from 'next/link';
 
 function HomePage() {
+    useEffect(() => {
+        console.log(token.token)
+    });
+
   return (
       <div>
           <div className="mensaje_home">
@@ -38,9 +45,11 @@ function HomePage() {
               <p className="mensaje_tres">Publica tu vacanate con nosotros</p>
               <div className="contain_cuadrito">
                   <p className="mensaje_cuatro">Encuentra al mejor empleado para tu empresa</p>
-                  <div className="contain_button">
+
+                  <Link href="publicarvacante"><div className="contain_button">
                       <ButtonSearch text="Publicar vacante" id={1}/>
-                  </div>
+                  </div></Link>
+                  
               </div>
           </div>
 
