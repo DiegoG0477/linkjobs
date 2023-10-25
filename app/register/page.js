@@ -14,7 +14,6 @@ function RegisterPage() {
         <div className="btn_center">
             <ButtonRegister text="Iniciar sesion" id={1}/>
         </div>
-        
       </div>
     </div>
   );

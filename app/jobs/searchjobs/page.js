@@ -5,11 +5,17 @@ import zumayaLogo from "@/public/assets/zumaya-img.png";
 import "@/app/globals.css";
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Importa el archivo JavaScript de Bootstrap (asegúrate de que sea bootstrap.bundle.min.js para que incluya Popper.js)
-
-
-
-
+import axios from "axios";
 export default function SearchPage() {
+    const [vacantGeneral, setVacantGeneral] = useState([]);
+    useEffect(() => {
+        loadVacantGeneral();
+    },[]);
+    const loadVacantGeneral = async () => {
+        const response = await axios.get("http://localhost:3001/api/v1/jobs");
+        setVacantGeneral(response.data.data);
+        console.log(response.data.data)
+    }
     const totalCards = 5; // Total de tarjetas
     const cardsPerGroup = 12; // Cantidad de tarjetas por grupo
     const [currentGroup, setCurrentGroup] = useState(1);
@@ -28,20 +34,22 @@ export default function SearchPage() {
     };
 
 
-    const cardsToShow = Array.from({ length: totalCards }).map((_, index) => {
+    const cardsToShow = vacantGeneral.map((vacant, index) => {
         if (index >= startCard && index < endCard) {
             return (
                 <JobCard
                     key={index}
                     sinceDate="Hace 2 días"
-                    vacant="Repartidor"
-                    salary="14,000"
-                    company="Zumaya"
-                    location="Tuxtla Gutiérrez, Chiapas"
+                    vacant={vacant.puesto}
+                    salary={vacant.salario}
+                    company={vacant.empresa}
+                    location={vacant.ubicacion}
                     requests="9876"
-                    image={zumayaLogo}
+                    description={vacant.descripcion}
+                    image={vacant.img_empresa}
                     type="generic"
                 />
+                
             );
         }
         return null;
@@ -68,6 +76,7 @@ export default function SearchPage() {
             <h1 className="page-title">Resultados de la busqueda</h1>
             <div className="contain_search"  >
                 {cardsToShow}
+                
             </div>
             <div className="contain_navigate">
                 <button className="button_navigate" onClick={handlePreviousGroup} disabled={currentGroup === 1}>
@@ -84,9 +93,7 @@ export default function SearchPage() {
             </div>
 
 
-
-
-            <button className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mimodal" data-bs-whatever="@mdo">Abrir modal</button>
+            
 
             <div className="modal fade " id="mimodal" data-bs-backdrop="static" data-bs-keyboard="false"
                  tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >

@@ -9,7 +9,7 @@ function Nav() {
     <div className="nav__container">
       <div className="img_nav">
       <Link href="/jobs">
-        <Img src={imagen} width={60} height={60}/>
+        <Img src={imagen} width={60} height={60} alt="home"/>
       </Link>
       </div>
       <div>

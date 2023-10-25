@@ -92,7 +92,7 @@ body{
 }
 .position_logo{
     position: relative;
-    top: 200px;
+    top: 50px;
 }
 
 .contain_search{
@@ -146,7 +146,7 @@ body{
     border-radius: 30px;
     padding: 20px;
     height: 40vw;
-    background-color: #E2E2E2;
+    background-color: #e3e3e3;
 }
 .title{
     margin: 15px auto;

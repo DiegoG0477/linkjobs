@@ -17,8 +17,6 @@ export default function VacantsPage() {
         image={zumayaLogo}
         type="vacant"
       />
-      <JobCard/>
-      <JobCard/>
     </>
   );
 }

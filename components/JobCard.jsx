@@ -15,9 +15,9 @@ export default function JobCard(props) {
       setGenericType(true);
     }
 
-    if (props.requestStatus === "Aceptado") {
+    if (props.requests == "Aceptado") {
       setStatusColor("#4BC76D");
-    } else if (props.requestStatus === "Rechazado") {
+    } else if (props.requests == "Rechazado") {
       setStatusColor("#C73737");
     }
   });
@@ -33,7 +33,7 @@ export default function JobCard(props) {
           <h3 className="job-vacant">{props.company}</h3>
           <p>{props.location}</p>
 
-          <p style={{ marginTop: "5vh" }}>texto adicional complementario</p>
+          <p style={{ marginTop: "5vh" }}>{props.description}</p>
         </div>
 
 
@@ -42,7 +42,7 @@ export default function JobCard(props) {
               <>
                 <button className="show-requests-button" data-bs-toggle="modal" data-bs-target="#mimodal"><p>Postularme</p></button>
                 <div>
-                  <Img src={props.image} className="position_logo" alt="" />
+                  <Img src={props.image} width={100} height={100} className="position_logo" alt="" />
                 </div>
               </>
           ) : (
@@ -61,12 +61,12 @@ export default function JobCard(props) {
                           style={{ background: { statusColor } }}
                           className="request-status"
                       >
-                        <p className ="request-status-text">{props.requestStatus}</p>
+                        <p className ="request-status-text">{props.requests}</p>
                       </div>
                     </>
                 )}
                 <div>
-                  <Img src={props.image} className="company-logo" alt="" />
+                  <Img src={props.image} width={100} height={100} className="company-logo" alt="" />
                 </div>
 
                 <button className="show-requests-button">{vacantType ? (<p>Ver Postulados</p>) : (<p>Ver Detalles</p>)}</button>

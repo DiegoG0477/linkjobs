@@ -1,6 +1,18 @@
+"use client"
 import InputFormRegister from "./InputFormRegister"
 import ButtonRegister from "./ButtonRegister"
+import { useState,useEffect } from "react"
 function FormRegister() {
+  const [form,setForm] = useState({
+    nombre:"",
+    apellidoPat:"",
+    apellidoMat:"",
+    fechaNacimiento:"",
+    email:"",
+    password:"",
+    confirmPassword:""
+  });
+  
   return (
     <form>
           <div className="form">
