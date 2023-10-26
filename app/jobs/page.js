@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import Img from "next/image";
 import ImgHome from "@/public/assets/busqueda_trabajo_asesoramiento.webp"
@@ -10,7 +11,8 @@ import Lala from "@/public/assets/lala.png"
 import Nestle from "@/public/assets/nestle.png"
 import Sambors from "@/public/assets/sanborns-logo.png"
 import Telmex from "@/public/assets/telmex.png"
-import Link from "next/link"
+import Link from 'next/link';
+
 function HomePage() {
   return (
       <div>

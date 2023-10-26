@@ -4,6 +4,7 @@ import InputSearch from "./InputSearch";
 import "./styles.css";
 import Img from "next/image"
 import imagen from "@/public/assets/casa.png"
+
 function Nav() {
   return (
     <div className="nav__container">
