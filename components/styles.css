@@ -242,3 +242,8 @@ ul{
     margin: 5px auto;
     width: 19.6vw;
 }
+
+.logout-box{
+    border: solid 2px #ffffff;
+    border-radius: 5px;
+}
