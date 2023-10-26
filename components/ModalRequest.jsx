@@ -29,7 +29,11 @@ function ModalRequest(props) {
           })
     }else{
         console.log(request);
-        axios.post("http://localhost:3001/api/v1//jobs/apply/7", request);
+        axios.defaults.withCredentials = true;
+        axios.defaults.headers.options = {
+            'Content-Type': 'application/json',
+        };
+        axios.post("http://localhost:3001/api/v1/jobs/apply", request);
     }
 }
 
@@ -77,7 +81,8 @@ function ModalRequest(props) {
                 >
                   Cancelar
                 </button>
-                <button type="submit" className="btn btn-primary">
+
+                <button type="submit" className="btn btn-primary"> 
                   Enviar
                 </button>
               </div>

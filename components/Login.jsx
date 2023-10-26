@@ -21,7 +21,6 @@ function FormularioLogin() {
       Axios.defaults.withCredentials = true;
       const response = await Axios.get(`http://localhost:3001/api/v1/auth/login/${email}/${password}`);
       console.log(response);
-      token.token = response.data.token;
       router.push('/jobs');
     }
     catch (error) {

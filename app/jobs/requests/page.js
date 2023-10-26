@@ -11,7 +11,7 @@ export default function Requests() {
         getRequests();
     },[])
     const getRequests = async () => {
-        const response = await axios.get("http://localhost:3001/api/v1/jobs/workers/requests/7")
+        const response = await axios.get("http://localhost:3001/api/v1/jobs/workers/requests")
          setRequests(response.data.data);
     }
     const totalCards = 5; // Total de tarjetas

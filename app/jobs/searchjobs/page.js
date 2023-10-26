@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import JobCard from "@/components/JobCard";
-import zumayaLogo from "@/public/assets/zumaya-img.png";
 import "@/app/globals.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Importa el archivo JavaScript de Bootstrap (asegúrate de que sea bootstrap.bundle.min.js para que incluya Popper.js)
