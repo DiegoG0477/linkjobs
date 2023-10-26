@@ -48,10 +48,10 @@ export default function JobCard(props) {
               <>
                 {vacantType ? (
                     <>
-                      <p style={{ fontWeight: "bolder" }}>Solicitudes</p>
+                      {/* <p style={{ fontWeight: "bolder" }}>Solicitudes</p>
                       <div className="requests-number-box">
                         <p>{props.requests}</p>
-                      </div>
+                      </div> */}
                     </>
                 ) : (
                     <>

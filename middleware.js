@@ -4,8 +4,6 @@ import { jwtVerify } from 'jose';
  
 export async function middleware(request) {
     const tokenObj = request.cookies.get('myToken');
-
-    // console.log(request.nextUrl.pathname);
     console.log(tokenObj);
 
     if(request.nextUrl.pathname.includes('/jobs')){

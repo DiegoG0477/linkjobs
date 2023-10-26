@@ -38,7 +38,7 @@ if(!form.nombre || !form.apellidoPat  || !form.apellidoMat || !form.fechaNacimie
       text: 'Las contraseñas no coinciden o no esta utilizando 8 caracteres!'
     })
   }else{
-    await axios.post("http://localhost:3001/api/v1/users", form);
+    await axios.post("http://localhost:3001/api/v1/auth/signUp", form);
     Swal.fire({
       position: 'center',
       icon: 'success',

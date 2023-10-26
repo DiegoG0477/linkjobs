@@ -31,6 +31,7 @@ function PublicarVacantePage() {
     formData.append("salario", job.salario);
     formData.append("description", job.description);
     formData.append("ubicacion", job.ubicacion);
+    formData.append("fechaCreacion", new Date());
     if(!job.puesto || !job.empresa || !job.salario || !job.description || !job.ubicacion || !file){
       Swal.fire({
         icon: 'error',

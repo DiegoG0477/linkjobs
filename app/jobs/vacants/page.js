@@ -25,18 +25,20 @@ export default function Vacants() {
   const startCard = (currentGroup - 1) * cardsPerGroup;
   const endCard = currentGroup * cardsPerGroup;
 
-  const cardsToShow = jobs.map((job, index) => {
+  const cardsToShow = jobs.map((vacant, index) => {
     if (index >= startCard && index < endCard) {
       return (
         <JobCard
           key={index}
-          sinceDate="Hace 2 días"
-          vacant={job.puesto}
-          salary={job.salario}
-          company={job.empresa}
-          location={job.ubicacion}
+          sinceDate={vacant.fecha_creacion}
+          id_vacant={vacant.id_puesto}
+          vacant={vacant.puesto}
+          salary={vacant.salario}
+          company={vacant.empresa}
+          location={vacant.ubicacion}
           requests="9876"
-          image={zumayaLogo}
+          description={vacant.descripcion}
+          image={vacant.img_empresa}
           type="vacant"
         />
       );

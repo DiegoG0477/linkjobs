@@ -28,7 +28,7 @@ export default function SearchPage() {
       return (
         <JobCard
           key={index}
-          sinceDate="Hace 2 días"
+          sinceDate={vacant.fecha_creacion}
           id_vacant={vacant.id_puesto}
           vacant={vacant.puesto}
           salary={vacant.salario}
