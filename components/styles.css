@@ -167,6 +167,9 @@
     font-size: 1rem;
     font-weight: bold;
 }
+.request-status{
+    padding: 2px 20px;
+}
 .inputRegister{
     border: 1px solid #B7B7B7;
     border-radius: 20px;

@@ -2,6 +2,7 @@
 import Img from "next/image";
 import { useEffect, useState } from "react";
 import "@/app/globals.css"
+import ModalRequest from "./ModalRequest";
 
 export default function JobCard(props) {
   const [vacantType, setVacantType] = useState(false);
@@ -32,15 +33,13 @@ export default function JobCard(props) {
 
           <h3 className="job-vacant">{props.company}</h3>
           <p>{props.location}</p>
-
+            
           <p style={{ marginTop: "5vh" }}>{props.description}</p>
         </div>
-
-
         <div>
           {genericType ? (
               <>
-                <button className="show-requests-button" data-bs-toggle="modal" data-bs-target="#mimodal"><p>Postularme</p></button>
+                <button className="show-requests-button" data-bs-toggle="modal" data-bs-target={`#mimodal_${props.id_vacant}`}><p>Postularme</p></button>
                 <div>
                   <Img src={props.image} width={100} height={100} className="position_logo" alt="" />
                 </div>
@@ -58,7 +57,7 @@ export default function JobCard(props) {
                     <>
                       <p style={{ fontWeight: "bolder" }}>STATUS</p>
                       <div
-                          style={{ background: { statusColor } }}
+                          style={{ background: statusColor }}
                           className="request-status"
                       >
                         <p className ="request-status-text">{props.requests}</p>
@@ -73,8 +72,8 @@ export default function JobCard(props) {
               </>
           )}
         </div>
-
       </div>
+      <ModalRequest id={props.id_vacant}/>
     </>
   );
 }

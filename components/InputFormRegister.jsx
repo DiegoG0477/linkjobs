@@ -5,10 +5,10 @@ function InputFormRegister(props) {
   return (
     <div>
     {(props.type != "password"?(
-      <input type={props.type} name={props.name} placeholder={props.holder} className='inputRegister'/>
+      <input type={props.type} name={props.name} placeholder={props.holder} className='inputRegister' onChange={props.fun}/>
     ):(
       <div>
-        <input type={props.type} name={props.name} placeholder={props.holder} className='inputRegisterImg'/>
+        <input type={props.type} name={props.name} placeholder={props.holder} className='inputRegisterImg' onChange={props.fun}/>
       </div>
     ))}
     </div>

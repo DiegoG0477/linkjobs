@@ -33,7 +33,7 @@ function PublicarVacantePage() {
     formData.append("ubicacion", job.ubicacion);
     if(!job.puesto || !job.empresa || !job.salario || !job.description || !job.ubicacion || !file){
       Swal.fire({
-        icon: 'warning',
+        icon: 'error',
         title: 'Oops...',
         text: 'Llena todos los campos!'
       })
