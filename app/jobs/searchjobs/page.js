@@ -2,8 +2,7 @@
 import React, { useState, useEffect } from "react";
 import JobCard from "@/components/JobCard";
 import "@/app/globals.css";
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Importa el archivo JavaScript de Bootstrap (asegúrate de que sea bootstrap.bundle.min.js para que incluya Popper.js)
+
 import axios from "axios";
 export default function SearchPage() {
   const [vacantGeneral, setVacantGeneral] = useState([]);
@@ -28,7 +27,7 @@ export default function SearchPage() {
       return (
         <JobCard
           key={index}
-          sinceDate={vacant.fecha_creacion}
+          sinceDate="{vacant.fecha_creacion}"
           id_vacant={vacant.id_puesto}
           vacant={vacant.puesto}
           salary={vacant.salario}

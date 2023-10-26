@@ -1,10 +1,12 @@
 import Nav from "@/components/Nav";
 import '../globals.css';
+import Footer from "@/components/Footer";
 function jobsLayout({ children }) {
-  return <div>
+  return (<div>
     <Nav/>
     {children}
-    </div>;
+    <Footer/>
+    </div>);
 }
 
 export default jobsLayout;

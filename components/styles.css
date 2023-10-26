@@ -242,3 +242,32 @@ ul{
     margin: 5px auto;
     width: 19.6vw;
 }
+
+.footer_contain {
+    display: flex;
+    padding: 20px;
+    text-align: center;
+    background-color: #F7F6F6;
+}
+
+.contain1, .contain2, .contain3 {
+    padding: 20px;
+    width: 100%;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+}
+
+.list li {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.mensajes_footer{
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif ;
+    font-family: 'Playpen Sans', cursive;
+}

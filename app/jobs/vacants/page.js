@@ -30,7 +30,7 @@ export default function Vacants() {
       return (
         <JobCard
           key={index}
-          sinceDate={vacant.fecha_creacion}
+          sinceDate="{vacant.fecha_creacion}"
           id_vacant={vacant.id_puesto}
           vacant={vacant.puesto}
           salary={vacant.salario}

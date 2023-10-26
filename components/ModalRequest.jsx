@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Importa el archivo JavaScript de Bootstrap (asegúrate de que sea bootstrap.bundle.min.js para que incluya Popper.js)
 function ModalRequest(props) {
   const [text, setText] = useState("");
   const maxCharacters = 200;

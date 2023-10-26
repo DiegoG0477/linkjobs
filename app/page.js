@@ -9,7 +9,7 @@ function HomeLoginPage() {
     <div className="login__container">
       <div className="parte1">
         <Login />
-      </div>
+       </div>
         <Img src={image} alt="imagen-login" className="imagen"/>
     </div>
   );
