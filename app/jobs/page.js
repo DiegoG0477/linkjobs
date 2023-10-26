@@ -46,7 +46,7 @@ function HomePage() {
               <div className="contain_cuadrito">
                   <p className="mensaje_cuatro">Encuentra al mejor empleado para tu empresa</p>
 
-                  <Link href="publicarvacante"><div className="contain_button">
+                  <Link href="/jobs/publicarvacante"><div className="contain_button">
                       <ButtonSearch text="Publicar vacante" id={1}/>
                   </div></Link>
                   
