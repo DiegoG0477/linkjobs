@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import JobCard from "@/components/JobCard";
-import "@/app/globals.css";
 
 import axios from "axios";
 export default function SearchPage() {
@@ -14,8 +13,8 @@ export default function SearchPage() {
     setVacantGeneral(response.data.data);
     console.log(response.data.data);
   };
-  const totalCards = 5; // Total de tarjetas
-  const cardsPerGroup = 12; // Cantidad de tarjetas por grupo
+  const totalCards = vacantGeneral.length; // Total de tarjetas
+  const cardsPerGroup = 6; // Cantidad de tarjetas por grupo
   const [currentGroup, setCurrentGroup] = useState(1);
   const previousGroup = currentGroup - 1;
   const nextGroup = currentGroup + 1;
@@ -25,7 +24,7 @@ export default function SearchPage() {
   const cardsToShow = vacantGeneral.map((vacant, index) => {
     if (index >= startCard && index < endCard) {
       return (
-        <JobCard
+          <JobCard
           key={index}
           sinceDate="{vacant.fecha_creacion}"
           id_vacant={vacant.id_puesto}

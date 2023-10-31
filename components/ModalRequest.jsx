@@ -31,10 +31,6 @@ function ModalRequest(props) {
           })
     }else{
         console.log(request);
-        axios.defaults.withCredentials = true;
-        axios.defaults.headers.options = {
-            'Content-Type': 'application/json',
-        };
         axios.post("http://localhost:3001/api/v1/jobs/apply", request);
     }
 }

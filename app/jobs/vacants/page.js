@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import JobCard from "@/components/JobCard";
 import zumayaLogo from "@/public/assets/zumaya-img.png";
-import "@/app/globals.css";
 import axios from "axios";
 
 export default function Vacants() {
@@ -17,7 +16,7 @@ export default function Vacants() {
     console.log(jobs);
   };
 
-  const totalCards = 7; // Total de tarjetas
+  const totalCards = jobs.length; // Total de tarjetas
   const cardsPerGroup = 6; // Cantidad de tarjetas por grupo
   const [currentGroup, setCurrentGroup] = useState(1);
   const previousGroup = currentGroup - 1;
