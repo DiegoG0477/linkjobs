@@ -243,6 +243,7 @@ ul{
     width: 19.6vw;
 }
 
+<<<<<<< HEAD
 .footer_contain {
     display: flex;
     padding: 20px;
@@ -270,4 +271,9 @@ ul{
     font-size: 20px;
     font-family: 'Nunito', sans-serif ;
     font-family: 'Playpen Sans', cursive;
+=======
+.logout-box{
+    border: solid 2px #ffffff;
+    border-radius: 5px;
+>>>>>>> b559a08e16b1ea33ea0f0921514cef75edac8187
 }
