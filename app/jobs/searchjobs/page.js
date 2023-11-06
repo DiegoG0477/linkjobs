@@ -11,7 +11,6 @@ export default function SearchPage() {
   const loadVacantGeneral = async () => {
     const response = await axios.get("http://localhost:3001/api/v1/jobs");
     setVacantGeneral(response.data.data);
-    console.log(response.data.data);
   };
   const totalCards = vacantGeneral.length; // Total de tarjetas
   const cardsPerGroup = 6; // Cantidad de tarjetas por grupo

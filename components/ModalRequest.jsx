@@ -31,7 +31,7 @@ function ModalRequest(props) {
           })
     }else{
         console.log(request);
-        axios.post("http://localhost:3001/api/v1/jobs/apply", request);
+        axios.post("http://localhost:3001/api/v1/jobs/apply", request,{withCredentials: true});
     }
 }
 

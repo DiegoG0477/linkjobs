@@ -7,13 +7,16 @@ import axios from "axios";
 export default function Requests() {
 
     const [requests, setRequests] = useState([]);
-    useEffect(()=>{
+    useEffect(() => {
         getRequests();
-    },[])
+      }, []);
+
     const getRequests = async () => {
-        const response = await axios.get("http://localhost:3001/api/v1/jobs/workers/requests")
+        const response = await axios.get("http://localhost:3001/api/v1/jobs/workers/requests",{withCredentials: true})
          setRequests(response.data.data);
     }
+
+
     const totalCards = 5; // Total de tarjetas
     const cardsPerGroup = 12; // Cantidad de tarjetas por grupo
     const [currentGroup, setCurrentGroup] = useState(1);

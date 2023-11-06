@@ -4,14 +4,12 @@ import { jwtVerify } from 'jose';
  
 export async function middleware(request) {
     const tokenObj = request.cookies.get('myToken');
-    console.log(tokenObj);
 
     if(request.nextUrl.pathname.includes('/jobs')){
         if(tokenObj === undefined){
             return NextResponse.redirect(new URL('/', request.url));
         }
 
-        console.log(process.env.JWT_SECRET);
 
         try{
             const { payload } = await jwtVerify(tokenObj.value, new TextEncoder().encode(process.env.JWT_SECRET));

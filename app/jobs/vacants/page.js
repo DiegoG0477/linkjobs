@@ -11,9 +11,8 @@ export default function Vacants() {
   }, []);
 
   const getJobs = async () => {
-    const response = await axios.get("http://localhost:3001/api/v1/jobs");
+    const response = await axios.get("http://localhost:3001/api/v1/jobs/employers/vacants",{withCredentials: true});
     setJobs(response.data.data);
-    console.log(jobs);
   };
 
   const totalCards = jobs.length; // Total de tarjetas

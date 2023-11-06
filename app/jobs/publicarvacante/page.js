@@ -39,8 +39,7 @@ function PublicarVacantePage() {
         text: 'Llena todos los campos!'
       })
     }else{
-      const response = await axios.post("http://localhost:3001/api/v1/jobs", formData);
-      console.log(response);
+      const response = await axios.post("http://localhost:3001/api/v1/jobs", formData,{withCredentials: true});
       Swal.fire({
         position: 'center',
         icon: 'success',
