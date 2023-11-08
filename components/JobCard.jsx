@@ -3,6 +3,7 @@ import Img from "next/image";
 import { useEffect, useState } from "react";
 import "@/app/globals.css"
 import ModalRequest from "./ModalRequest";
+import ModalAcceptRequest from "./ModalAcceptRequest";
 
 export default function JobCard(props) {
   const [vacantType, setVacantType] = useState(false);
@@ -52,6 +53,7 @@ export default function JobCard(props) {
                       <div className="requests-number-box">
                         <p>{props.requests}</p>
                       </div> */}
+                      <button className="show-requests-button" data-bs-toggle="modal" data-bs-target={`#mimodal2_${props.id_vacant}`}><p>Ver Solicitudes</p></button>
                     </>
                 ) : (
                     <>
@@ -67,13 +69,12 @@ export default function JobCard(props) {
                 <div>
                   <Img src={props.image} width={100} height={100} className="company-logo" alt="" />
                 </div>
-
-                <button className="show-requests-button">{vacantType ? (<p>Ver Postulados</p>) : (<p>Ver Detalles</p>)}</button>
               </>
           )}
         </div>
       </div>
       <ModalRequest id={props.id_vacant}/>
+      <ModalAcceptRequest id={props.id_vacant}/>
     </>
   );
 }

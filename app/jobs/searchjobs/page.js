@@ -9,7 +9,7 @@ export default function SearchPage() {
     loadVacantGeneral();
   }, []);
   const loadVacantGeneral = async () => {
-    const response = await axios.get("http://localhost:3001/api/v1/jobs");
+    const response = await axios.get("http://localhost:3001/api/v1/jobs",{withCredentials: true});
     setVacantGeneral(response.data.data);
   };
   const totalCards = vacantGeneral.length; // Total de tarjetas
