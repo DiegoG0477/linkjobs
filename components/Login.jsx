@@ -8,6 +8,7 @@ import login from "@/public/assets/login.png"
 import { useState } from 'react'
 import Axios from "axios";
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 
 function FormularioLogin() {
   const router = useRouter();
@@ -36,9 +37,9 @@ function FormularioLogin() {
         <form className='formLogin'>
             <InputLabel label="Correo electronico" type="email" name="email" holder="Email" metodo={setEmail}/>
             <InputLabel label="Contraseña" type="password" name="password" holder="Password" metodo={setPassword}/>
+            <Link style={{textDecoration:"none", textAlign:"center", color:"white"}} href="/register"><p style={{width:"40vw"}}>¿No tienes cuenta? Registrate</p></Link>
             <div className='centrar'>
               <Button text="INICIAR SESION" loginFunction={handleLogin}/>
-                
             </div>
         </form>
     </div>
